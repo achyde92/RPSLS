@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,8 @@ namespace RPSLS
 
         public int ChooseNumberOfHumanPlayers()
         {
-            return 0;
+            Console.WriteLine("How many humans will be playing?");
+            
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
@@ -46,7 +48,12 @@ namespace RPSLS
 
         public void RunGame()
         {
+            //Step 1: Display the rules of the game
+           
+            //Step 2: Ask how many human players will be playing
             WelcomeMessage();
+
+
         }
     }
 }
