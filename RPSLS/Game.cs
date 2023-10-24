@@ -47,25 +47,27 @@ namespace RPSLS
         {
             if (numberOfHumanPlayers == 1)
             {
-                playerOne = new HumanPlayer("name here");
-                playerTwo = new ComputerPlayer();
                 Console.WriteLine("Player One enter your name");
-                Console.ReadLine();
+                playerOne.name =Console.ReadLine();
+                playerOne = new HumanPlayer(playerOne.name);
+                playerTwo = new ComputerPlayer();
             }
             else
             {
-                playerOne = new HumanPlayer("name here");
-                playerTwo = new HumanPlayer("name here");
                 Console.WriteLine("Player One enter your name");
-                Console.ReadLine();
+                playerOne.name =Console.ReadLine();
                 Console.WriteLine("Player Two enter your name");
-                Console.ReadLine();
+                playerTwo.name =Console.ReadLine();
+                playerOne = new HumanPlayer(playerOne.name);
+                playerTwo = new HumanPlayer(playerTwo.name);
+               
             }
         }
         
 
         public void CompareGestures()
         {
+            
 
         }
 
