@@ -39,22 +39,27 @@ namespace RPSLS
         public int ChooseNumberOfHumanPlayers()
         {
             Console.WriteLine("How many humans will be playing? 1 or 2?");
-            int ChooseNumberOfHumanPlayers = int.Parse(Console.ReadLine());
+            int numPlayers = int.Parse(Console.ReadLine());
+            return numPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-            int numberofHumanPlayers = int ChooseNumberOfHumanPlayer();
-
             if (numberOfHumanPlayers == 1)
             {
-                playerOne = HumanPlayer();
-                playerTwo = ComputerPlayer();
+                playerOne = new HumanPlayer("name here");
+                playerTwo = new ComputerPlayer();
+                Console.WriteLine("Player One enter your name");
+                Console.ReadLine();
             }
             else
             {
-                playerOne = HumanPlayer();
-                playerTwo = HumanPlayer();
+                playerOne = new HumanPlayer("name here");
+                playerTwo = new HumanPlayer("name here");
+                Console.WriteLine("Player One enter your name");
+                Console.ReadLine();
+                Console.WriteLine("Player Two enter your name");
+                Console.ReadLine();
             }
         }
         
@@ -74,9 +79,9 @@ namespace RPSLS
             //Step 1: Display the rules of the game
             WelcomeMessage();
             //Step 2: Ask how many human players will be playing
-            ChooseNumberOfHumanPlayers();
+            int numberofHumanPlayers = ChooseNumberOfHumanPlayers();
 
-
+            CreatePlayerObjects(numberofHumanPlayers);
 
         }
     }

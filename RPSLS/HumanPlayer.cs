@@ -3,9 +3,8 @@ namespace RPSLS
 {
 	internal class HumanPlayer : Player
 	{
-		public HumanPlayer(string name, List<string> gestures, string chosenGesture, int score) :  base (chosenGesture)
+		public HumanPlayer(string name) : base(name)
 		{
-
 		}
 	
 		public override void ChooseGesture()

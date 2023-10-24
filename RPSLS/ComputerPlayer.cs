@@ -5,14 +5,17 @@ namespace RPSLS
 	{
         Random rand;
 
-		public ComputerPlayer(string name, List<string> gestures, string chosenGesture, int score) : base (chosenGesture)
+		public ComputerPlayer() : base("Computer")
         {
-
+            Random rand = new Random();
         }
 
         public override void ChooseGesture()
         {
-            Console.Write
+            int randNum;
+            randNum = rand.Next(5);
+
+            chosenGesture = gestures[randNum];
             Console.WriteLine($"Computer chose {chosenGesture}");
         }
     }
