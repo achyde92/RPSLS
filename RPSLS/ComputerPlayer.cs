@@ -7,7 +7,7 @@ namespace RPSLS
 
 		public ComputerPlayer() : base("Computer")
         {
-            Random rand = new Random();
+            rand = new Random();
         }
 
         public override void ChooseGesture()

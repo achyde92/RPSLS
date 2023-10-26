@@ -9,9 +9,10 @@ namespace RPSLS
 	
 		public override void ChooseGesture()
 		{
-           Console.WriteLine("Which gesture do you choose?");
-           string chosenGesture = Console.ReadLine();
-			Console.WriteLine($"Player chose {chosenGesture}");
+            Console.WriteLine("Which gesture do you choose?");
+			Console.WriteLine($"{gestures[0]}\n{gestures[1]}\n{gestures[2]}\n{gestures[3]}\n{gestures[4]}\n");
+            chosenGesture = Console.ReadLine();
+			Console.WriteLine($"{name} chose {chosenGesture}");
 		}
 	}
 }
